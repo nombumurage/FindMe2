@@ -61,7 +61,7 @@ public class medicalDetails {
         return  medAllergies;
     }
 
-    public  String getUserAllegies(){
+    public  String getUserAllergies(){
 
         return userAllegies;
     }
