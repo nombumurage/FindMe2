@@ -1,0 +1,106 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.findus.findme.EmergencyContactsFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:text="Emergency Contacts"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/registerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Step 2: Please Provide Emergency Contacts"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="9dp"
+                    android:background="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:id="@+id/emergencyContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/white"
+                    android:hint="Emergency Contact Name"
+                    android:nextFocusDown="@+id/emergencyNumber"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/emergencyNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/white"
+                    android:hint="Contact number"
+                    android:nextFocusDown="@+id/emergencyContactAddBtn"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/emergencyContactAddBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/flatui_midnight_blue"
+                    android:nextFocusDown="@+id/emergencyContactBtn"
+                    android:padding="10dp"
+                    android:text="Add Contact"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/emergencyContactBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/flatui_midnight_blue"
+                    android:padding="10dp"
+                    android:text="Save and Continue"
+                    android:textColor="@android:color/white"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>
