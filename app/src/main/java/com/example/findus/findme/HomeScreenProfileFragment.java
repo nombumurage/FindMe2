@@ -18,10 +18,10 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Profile extends Fragment  implements View.OnClickListener{
-    @Bind(R.id.header_cover_image) ImageView mLogoImage;
-    @Bind(R.id.user_profile_photo) ImageView mUserProfilePhoto;
-    @Bind(R.id.editProfile) ImageView mEditProfile;
+public class HomeScreenProfileFragment extends Fragment implements View.OnClickListener{
+    @Bind(R.id.header_cover_image)
+    ImageView mUserProfilePhoto;
+    @Bind(R.id.userNameField) TextView mUserNameField;
     @Bind(R.id.user_profile_name) TextView mUserName;
     @Bind(R.id.bloodTypeField) TextView mBloodTypeField;
     @Bind(R.id.bloodType) TextView mBloodType;
@@ -56,7 +56,7 @@ public class Profile extends Fragment  implements View.OnClickListener{
     }
 
 
-    public Profile() {
+    public HomeScreenProfileFragment() {
         // Required empty public constructor
     }
 
@@ -70,14 +70,12 @@ public class Profile extends Fragment  implements View.OnClickListener{
         ButterKnife.bind(this,view);
 
         mUserProfilePhoto.setOnClickListener(this);
-        mEditProfile.setOnClickListener(this);
         mEmergencyContactOnePhone.setOnClickListener(this);
         mUserPhoneIcon.setOnClickListener(this);
         mUserPhoneICon1.setOnClickListener(this);
         mUserPhoneICon2.setOnClickListener(this);
         mEmergencyContactTwoPhone.setOnClickListener(this);
         mEmergencyContactThreePhone.setOnClickListener(this);
-
 
         return view;
 
