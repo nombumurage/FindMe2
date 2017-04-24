@@ -1,0 +1,369 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.findus.findme.Profile">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="#ebca0707"
+                android:src="@drawable/nombs" />
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_cover_image"
+                android:background="@color/colorPrimary"
+                android:elevation="4dp"
+                android:paddingBottom="24dp">
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_layout"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/userNameField"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="        Name"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:id="@+id/user_profile_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="Nombuyiselo Murage "
+                            android:textColor="#000"/>
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/genderField"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="      Gender"
+                            android:textColor="#000"/>
+
+                        <TextView
+                            android:id="@+id/gender"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="  Female"
+                            android:textColor="#000"/>
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/bloodTypeField"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text="BloodType"
+                            android:textColor="#000"/>
+
+
+
+                        <TextView
+                            android:id="@+id/bloodType"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="#fff"
+                            android:clickable="true"
+                            android:elevation="4dp"
+                            android:padding="20dp"
+                            android:text=" B Positive"
+                            android:textColor="#000" />
+                    </GridLayout>
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/emergencyContact"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#fff"
+                    android:textAlignment="center"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Emergency Contacts" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/emergencyContact1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:elevation="4dp"                          android:layout_alignBottom="@+id/emergencyContact"
+                        android:padding="10dp"
+                        android:text="Joan Njoroge" />
+
+                    <ImageView
+                        android:id="@+id/userPhoneIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"   android:layout_toLeftOf="@+id/emergencyContact1phone"
+                        android:src="@drawable/ic_phone_black_24dp" />
+
+                    <TextView                                                      android:id="@+id/emergencyContact1phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#fff"               android:layout_toLeftOf="@+id/emergencyContact1"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:textColor="#000"
+                        android:text="+254 700500" />
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/emergencyContact2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:text=" Anita Kamau" />
+
+                    <ImageView
+                        android:id="@+id/userPhoneIcon2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"   android:layout_toLeftOf="@+id/emergencyContact2phone"
+                        android:src="@drawable/ic_phone_black_24dp" />
+
+                    <TextView                                                      android:id="@+id/emergencyContact2phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#fff" android:layout_toLeftOf="@+id/emergencyContact2"
+                        android:clickable="true"
+                        android:textColor="#000"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:text="+254 6879400" />
+
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/emergencyContact3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:elevation="4dp"                          android:layout_alignBottom="@+id/emergencyContact"
+                        android:padding="10dp"
+                        android:text="Susan Shelton" />
+
+                    <ImageView
+                        android:id="@+id/userPhoneIcon3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"   android:layout_toLeftOf="@+id/emergencyContact3phone" android:src="@drawable/ic_phone_black_24dp" />
+
+                    <TextView                                                      android:id="@+id/emergencyContact3phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#fff"               android:layout_toLeftOf="@+id/emergencyContact3"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        android:text="+254 0869790"
+                        android:textColor="#000"/>
+                </GridLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/conditions"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="20dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:text="Condition" />
+
+                    <ListView
+                        android:id="@+id/listConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/conditions">
+
+
+                    </ListView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/medicalAllergies"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="20dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:text="Medical Allergies" />
+                    <ListView
+                        android:id="@+id/listMedicalAllergies"
+                        android:layout_alignBottom="@+id/medicalAllergies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </ListView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/otherAllergies"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="#fff"
+                        android:clickable="true"
+                        android:elevation="4dp"
+                        android:padding="20dp"
+                        android:textColor="#000"
+                        android:textAlignment="center"
+                        android:text="Other Allergies" />
+
+                    <ListView
+                        android:id="@+id/listotherAllergies"                        android:layout_alignBottom="@+id/otherAllergies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </ListView>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
