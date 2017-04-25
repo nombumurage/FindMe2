@@ -71,22 +71,62 @@
                     android:layout_marginBottom="10dp"
                     android:background="@android:color/white"
                     android:hint="Contact number"
-                    android:nextFocusDown="@+id/emergencyContactAddBtn"
                     android:padding="10dp"
                     android:textColor="@android:color/black"
                     android:textColorHint="@color/colorDivider"
                     android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/emergencyContactAddBtn"
+                <EditText
+                    android:id="@+id/emergencyContact1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:background="@color/flatui_midnight_blue"
-                    android:nextFocusDown="@+id/emergencyContactBtn"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/white"
+                    android:hint="Emergency Contact Name Two"
+                    android:nextFocusDown="@+id/emergencyNumber"
                     android:padding="10dp"
-                    android:text="Add Contact"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/emergencyNumber1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/white"
+                    android:hint="Contact number"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/emergencyContact2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/white"
+                    android:hint="Emergency Contact Name Three"
+                    android:nextFocusDown="@+id/emergencyNumber"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/emergencyNumber2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/white"
+                    android:hint="Contact number"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp" />
+
+
+
 
                 <Button
                     android:id="@+id/emergencyContactBtn"

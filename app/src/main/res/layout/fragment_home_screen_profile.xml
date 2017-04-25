@@ -19,7 +19,7 @@
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:background="#ebca0707"
-                android:src="@drawable/nombs" />
+                android:src="@drawable/nombu" />
 
             <RelativeLayout
                 android:id="@+id/profile_layout"
@@ -76,7 +76,7 @@
                             android:clickable="true"
                             android:elevation="4dp"
                             android:padding="20dp"
-                            android:text="Nombuyiselo Murage "
+                            android:text=" "
                             android:textColor="#000"/>
 
                     </GridLayout>
@@ -106,11 +106,12 @@
                             android:id="@+id/gender"
                             android:layout_width="fill_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
                             android:padding="20dp"
-                            android:text="  Female"
+                            android:text="  "
                             android:textColor="#000"/>
 
                     </GridLayout>
@@ -147,7 +148,7 @@
                             android:clickable="true"
                             android:elevation="4dp"
                             android:padding="20dp"
-                            android:text=" B Positive"
+                            android:text=" "
                             android:textColor="#000" />
                     </GridLayout>
 
@@ -178,13 +179,13 @@
 
                     <TextView
                         android:id="@+id/emergencyContact1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:background="#fff"
                         android:elevation="4dp"                          android:layout_alignBottom="@+id/emergencyContact"
                         android:padding="10dp"
-                        android:text="Joan Njoroge" />
+                        android:text="Name1" />
 
                     <ImageView
                         android:id="@+id/userPhoneIcon"
@@ -205,7 +206,7 @@
                         android:elevation="4dp"
                         android:padding="10dp"
                         android:textColor="#000"
-                        android:text="+254 700500" />
+                        android:text=" " />
                 </GridLayout>
 
                 <GridLayout
@@ -214,14 +215,14 @@
 
                     <TextView
                         android:id="@+id/emergencyContact2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:background="#fff"
                         android:clickable="true"
                         android:elevation="4dp"
                         android:padding="10dp"
-                        android:text=" Anita Kamau" />
+                        android:text="Name2" />
 
                     <ImageView
                         android:id="@+id/userPhoneIcon2"
@@ -242,7 +243,7 @@
                         android:textColor="#000"
                         android:elevation="4dp"
                         android:padding="10dp"
-                        android:text="+254 6879400" />
+                        android:text="" />
 
                 </GridLayout>
 
@@ -253,13 +254,13 @@
 
                     <TextView
                         android:id="@+id/emergencyContact3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:background="#fff"
                         android:elevation="4dp"                          android:layout_alignBottom="@+id/emergencyContact"
                         android:padding="10dp"
-                        android:text="Susan Shelton" />
+                        android:text="Name3" />
 
                     <ImageView
                         android:id="@+id/userPhoneIcon3"
@@ -278,7 +279,7 @@
                         android:clickable="true"
                         android:elevation="4dp"
                         android:padding="10dp"
-                        android:text="+254 0869790"
+                        android:text=""
                         android:textColor="#000"/>
                 </GridLayout>
 
@@ -299,14 +300,14 @@
                         android:textAlignment="center"
                         android:text="Condition" />
 
-                    <ListView
+                    <TextView
                         android:id="@+id/listConditions"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/conditions">
 
 
-                    </ListView>
+                    </TextView>
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -325,13 +326,13 @@
                         android:textColor="#000"
                         android:textAlignment="center"
                         android:text="Medical Allergies" />
-                    <ListView
+                    <TextView
                         android:id="@+id/listMedicalAllergies"
                         android:layout_alignBottom="@+id/medicalAllergies"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                    </ListView>
+                    </TextView>
 
                 </RelativeLayout>
 
@@ -352,12 +353,12 @@
                         android:textAlignment="center"
                         android:text="Other Allergies" />
 
-                    <ListView
+                    <TextView
                         android:id="@+id/listotherAllergies"                        android:layout_alignBottom="@+id/otherAllergies"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                    </ListView>
+                    </TextView>
 
                 </RelativeLayout>
 

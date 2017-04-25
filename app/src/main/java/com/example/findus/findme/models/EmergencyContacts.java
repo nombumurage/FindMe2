@@ -1,23 +1,37 @@
 package com.example.findus.findme.models;
 
-/**
- * Created by pauline on 4/24/17.
- */
-
 public class EmergencyContacts {
-    String  EmergencyContactName;
-    String  EmergencyContactNumber;
+    private String  EmergencyContactNameOne;
+    private String  EmergencyContactNumberOne;
+    private String  EmergencyContactNameTwo;
+    private String  EmergencyContactNumberTwo;
+    private String  EmergencyContactNameThree;
+    private String  EmergencyContactNumberThree;
 
-    public EmergencyContacts(String  EmergencyContactName, String  EmergencyContactNumber) {
-        this.EmergencyContactName = EmergencyContactName;
-        this.EmergencyContactNumber = EmergencyContactNumber;
-    }
-    public  String getEmergencyContactName(){
-        return EmergencyContactName;
-    }
-    public String getEmergencyContactNumber(){
-        return EmergencyContactNumber;
-    }
+    public EmergencyContacts(){}
 
-
+    public EmergencyContacts(String  EmergencyContactNameOne, String  EmergencyContactNumberOne,String  EmergencyContactNameTwo, String  EmergencyContactNumberTwo,String  EmergencyContactNameThree, String  EmergencyContactNumberThree) {
+        this.EmergencyContactNameOne = EmergencyContactNameOne;
+        this.EmergencyContactNumberOne = EmergencyContactNumberOne;
+        this.EmergencyContactNameTwo = EmergencyContactNameTwo;
+        this.EmergencyContactNumberTwo = EmergencyContactNumberTwo;
+        this.EmergencyContactNameThree = EmergencyContactNameThree;
+        this.EmergencyContactNumberThree = EmergencyContactNumberThree;
+    }
+    public  String getEmergencyContactNameOne(){
+        return EmergencyContactNameOne;
+    }
+    public String getEmergencyContactNumberOne(){
+        return EmergencyContactNumberOne;
+    }
+    public  String getEmergencyContactNameTwo(){return EmergencyContactNameTwo;}
+    public String getEmergencyContactNumberTwo(){
+        return EmergencyContactNumberTwo;
+    }
+    public  String getEmergencyContactNameThree(){
+        return EmergencyContactNameThree;
+    }
+    public String getEmergencyContactNumberThree(){
+        return EmergencyContactNumberThree;
+    }
 }
