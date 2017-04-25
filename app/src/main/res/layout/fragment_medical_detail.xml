@@ -64,6 +64,19 @@
                     android:layout_marginBottom="10dp"/>
 
                 <EditText
+                    android:id="@+id/userPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:hint="Phone Number"
+                    android:nextFocusDown="@+id/gender_spinner"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/colorDivider"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
                     android:id="@+id/userAge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -76,11 +89,11 @@
                     android:textSize="20sp"
                     android:layout_marginBottom="10dp"/>
 
+
                 <android.support.v7.widget.AppCompatSpinner
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/gender_spinner"
-                    android:nextFocusDown="@+id/bloodGroup_Spinner"
+                    android:id="@+id/gender_spinner"           android:nextFocusDown="@+id/bloodGroup_Spinner"
                     android:background="@android:color/white"
                     android:entries="@array/user_gender"
                     android:textColorHint="@color/colorDivider"
@@ -122,7 +135,7 @@
 
                     <EditText
                         android:id="@+id/userMedicalConditions"
-                        android:layout_width="280dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/white"
                         android:hint="Please state any pre-existing medical conditions you have"
@@ -134,14 +147,6 @@
                         android:inputType="textMultiLine"
                         android:layout_marginBottom="10dp"
                         />
-                    <ImageButton
-                        android:id="@+id/addMedicalConditions"
-                        android:layout_width="30dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="14dp"
-                        android:layout_marginLeft="10dp"
-                        android:src="@android:drawable/ic_menu_add"
-                        android:background="@color/flatui_midnight_blue"/>
 
                 </android.support.v7.widget.LinearLayoutCompat>
 
