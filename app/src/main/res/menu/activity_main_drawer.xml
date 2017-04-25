@@ -5,27 +5,27 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Home" />
         <item
             android:id="@+id/nav_medDetails"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="User Details" />
         <item
             android:id="@+id/nav_contacts"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="Emergency Contacts" />
         <item
             android:id="@+id/nav_insurance"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Insurance" />
         <item
             android:id="@+id/nav_userProfile"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Insurances"/>
+            android:title="User Profile"/>
         <item
             android:id="@+id/nav_location"
             android:icon="@drawable/ic_menu_share"
-            android:title="Share" />
+            android:title="Location" />
     </group>
 
     <item android:title="Communicate">
