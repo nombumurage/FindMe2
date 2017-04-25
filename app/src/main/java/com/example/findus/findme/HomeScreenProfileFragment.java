@@ -18,16 +18,11 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeScreenProfile extends Fragment implements View.OnClickListener{
-    @Bind(R.id.header_cover_image)
-    ImageView mUserProfilePhoto;
-    @Bind(R.id.userNameField) TextView mUserNameField;
+public class HomeScreenProfileFragment extends Fragment implements View.OnClickListener{
+    @Bind(R.id.header_cover_image) ImageView mUserProfilePhoto;
     @Bind(R.id.user_profile_name) TextView mUserName;
-    @Bind(R.id.bloodTypeField) TextView mBloodTypeField;
     @Bind(R.id.bloodType) TextView mBloodType;
-    @Bind(R.id.genderField) TextView mGenderField;
     @Bind(R.id.gender) TextView mGender;
-    @Bind(R.id.emergencyContact) TextView mEmergencyContactFiled;
     @Bind(R.id.emergencyContact1) TextView mEmergencyContactOne;
     @Bind(R.id.emergencyContact1phone) TextView mEmergencyContactOnePhone;
     @Bind(R.id.userPhoneIcon) ImageView mUserPhoneIcon;
@@ -37,11 +32,8 @@ public class HomeScreenProfile extends Fragment implements View.OnClickListener{
     @Bind(R.id.emergencyContact2phone) TextView mEmergencyContactTwoPhone;
     @Bind(R.id.emergencyContact3) TextView mEmergencyContactThree;
     @Bind(R.id.emergencyContact3phone) TextView mEmergencyContactThreePhone;
-    @Bind(R.id.conditions) TextView mConditions;
     @Bind(R.id.listConditions) ListView mConditionsList;
-    @Bind(R.id.medicalAllergies) TextView mMedicalAllergies;
     @Bind(R.id.listMedicalAllergies)ListView mListMedicalAllergies;
-    @Bind(R.id.otherAllergies) TextView mOtherAllergies;
     @Bind(R.id.listotherAllergies) ListView mlistOtherAllergies;
 
 
@@ -56,7 +48,7 @@ public class HomeScreenProfile extends Fragment implements View.OnClickListener{
     }
 
 
-    public HomeScreenProfile() {
+    public HomeScreenProfileFragment() {
         // Required empty public constructor
     }
 
