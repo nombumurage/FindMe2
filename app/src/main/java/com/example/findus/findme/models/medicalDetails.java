@@ -13,7 +13,7 @@ public class medicalDetails {
 
     public medicalDetails() {}
 
-    public medicalDetails( String name, String age, String phoneNumber, String condition, String medAllergies, String userAllegies) {
+    public medicalDetails( String name, String age, String phoneNumber,String gender,String bloodGroup, String condition, String medAllergies, String userAllegies) {
         this.name = name;
         this.age = age;
         this.phoneNumber=phoneNumber;
