@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -31,49 +32,34 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class ProfileFragment extends Fragment  implements View.OnClickListener {
 
     private static final String TAG = ProfileFragment.class.getSimpleName();
 
-    @Bind(R.id.header_cover_image)
-    ImageView mLogoImage;
-    @Bind(R.id.user_profile_photo)
-    ImageButton mUserProfilePhoto;
-    @Bind(R.id.editProfile)
-    ImageView mEditProfile;
-    @Bind(R.id.user_profile_name)
-    TextView mUserName;
-    @Bind(R.id.bloodType)
-    TextView mBloodType;
-    @Bind(R.id.gender)
-    TextView mGender;
-    @Bind(R.id.emergencyContact1)
-    TextView mEmergencyContactOne;
-    @Bind(R.id.emergencyContact1phone)
-    TextView mEmergencyContactOnePhone;
-    @Bind(R.id.userPhoneIcon)
-    ImageView mUserPhoneIcon;
-    @Bind(R.id.userPhoneIcon2)
-    ImageView mUserPhoneICon1;
-    @Bind(R.id.userPhoneIcon3)
-    ImageView mUserPhoneICon2;
-    @Bind(R.id.emergencyContact2)
-    TextView mEmergencyContactTwo;
-    @Bind(R.id.emergencyContact2phone)
-    TextView mEmergencyContactTwoPhone;
-    @Bind(R.id.emergencyContact3)
-    TextView mEmergencyContactThree;
-    @Bind(R.id.emergencyContact3phone)
-    TextView mEmergencyContactThreePhone;
-    @Bind(R.id.listConditions)
-    TextView mConditionsList;
-    @Bind(R.id.listMedicalAllergies)
-    TextView mListMedicalAllergies;
-    @Bind(R.id.listotherAllergies)
-    TextView mlistOtherAllergies;
+    @Bind(R.id.header_cover_image) ImageView mLogoImage;
+    @Bind(R.id.user_profile_photo) ImageButton mUserProfilePhoto;
+    @Bind(R.id.editProfile) ImageView mEditProfile;
+    @Bind(R.id.user_profile_name) TextView mUserName;
+    @Bind(R.id.bloodType) TextView mBloodType;
+    @Bind(R.id.gender) TextView mGender;
+    @Bind(R.id.emergencyContact1) TextView mEmergencyContactOne;
+    @Bind(R.id.emergencyContact1phone) TextView mEmergencyContactOnePhone;
+//    @Bind(R.id.userPhoneIcon) ImageView mUserPhoneIcon;
+//    @Bind(R.id.userPhoneIcon2) ImageView mUserPhoneICon1;
+//    @Bind(R.id.userPhoneIcon3) ImageView mUserPhoneICon2;
+    @Bind(R.id.emergencyContact2) TextView mEmergencyContactTwo;
+    @Bind(R.id.emergencyContact2phone) TextView mEmergencyContactTwoPhone;
+    @Bind(R.id.emergencyContact3) TextView mEmergencyContactThree;
+    @Bind(R.id.emergencyContact3phone) TextView mEmergencyContactThreePhone;
+    @Bind(R.id.listConditions) TextView mConditionsList;
+    @Bind(R.id.listMedicalAllergies) TextView mListMedicalAllergies;
+    @Bind(R.id.listotherAllergies) TextView mlistOtherAllergies;
+    @Bind(R.id.userAge) TextView mUserAge;
+    @Bind(R.id.userNationalId) TextView mNationalId;
+    @Bind(R.id.insurancePolicyNo) TextView mPolicyNo;
+    @Bind(R.id.userMedCover) TextView mMedCover;
+    @Bind(R.id.userPrefHospital) TextView mPrefHospital;
 
 
     @Override
@@ -97,9 +83,9 @@ public class ProfileFragment extends Fragment  implements View.OnClickListener {
         mUserProfilePhoto.setOnClickListener(this);
         mEditProfile.setOnClickListener(this);
         mEmergencyContactOnePhone.setOnClickListener(this);
-        mUserPhoneIcon.setOnClickListener(this);
-        mUserPhoneICon1.setOnClickListener(this);
-        mUserPhoneICon2.setOnClickListener(this);
+//        mUserPhoneIcon.setOnClickListener(this);
+//        mUserPhoneICon1.setOnClickListener(this);
+//        mUserPhoneICon2.setOnClickListener(this);
         mEmergencyContactTwoPhone.setOnClickListener(this);
         mEmergencyContactThreePhone.setOnClickListener(this);
 
@@ -119,28 +105,59 @@ public class ProfileFragment extends Fragment  implements View.OnClickListener {
         FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
         String uid = users.getUid();
 
-        Toast.makeText(getActivity(), uid, Toast.LENGTH_SHORT).show();
-
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-//                EmergencyContacts emgContacts = new EmergencyContacts(dataSnapshot.child("emergencyContacts"));
+               String person1= dataSnapshot.child("emergencyContacts").child("emergencyContactNameOne").getValue().toString();
+               String  person1Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberOne").getValue().toString();
+                String person2= dataSnapshot.child("emergencyContacts").child("emergencyContactNameTwo").getValue().toString();
+                String  person2Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberTwo").getValue().toString();
+                String person3= dataSnapshot.child("emergencyContacts").child("emergencyContactNameThree").getValue().toString();
+                String  person3Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberThree").getValue().toString();
 
-//                EmergencyContacts emgContacts = dataSnapshot.getChildrenCount().getValue(EmergencyContacts.class);
-                ArrayList<String> arr = new ArrayList<String>();
-                String i = dataSnapshot.child("emergencyContacts").getValue().toString();
+                mEmergencyContactOne.setText(person1);
+                mEmergencyContactOnePhone.setText(person1Cont);
+                mEmergencyContactTwo.setText(person2);
+                mEmergencyContactTwoPhone.setText(person2Cont);
+                mEmergencyContactThree.setText(person3);
+                mEmergencyContactThreePhone.setText(person3Cont);
 
-                Log.d(TAG, ">>> " + i);
 
-//
-//                mEmergencyContactOne.setText( emgContacts.getEmergencyContactNameOne());
-//                mEmergencyContactOnePhone.setText( emgContacts.getEmergencyContactNumberOne());
-//                mEmergencyContactTwo.setText( emgContacts.getEmergencyContactNameTwo());
-//                mEmergencyContactTwoPhone.setText( emgContacts.getEmergencyContactNumberTwo());
-//                mEmergencyContactThree.setText( emgContacts.getEmergencyContactNameThree());
-//                mEmergencyContactThreePhone.setText( emgContacts.getEmergencyContactNameThree());
+
+                String age= dataSnapshot.child("medicalDetails").child("age").getValue().toString();
+                String  condition = dataSnapshot.child("medicalDetails").child("condition").getValue().toString();
+                String medAllergies= dataSnapshot.child("medicalDetails").child("medAllergies").getValue().toString();
+                String  name = dataSnapshot.child("medicalDetails").child("name").getValue().toString();
+                String phoneNumber= dataSnapshot.child("medicalDetails").child("phoneNumber").getValue().toString();
+                String  otherAllegies = dataSnapshot.child("medicalDetails").child("userAllergies").getValue().toString();
+                String  gender = dataSnapshot.child("medicalDetails").child("gender").getValue().toString();
+                String  bloodType = dataSnapshot.child("medicalDetails").child("bloodGroup").getValue().toString();
+
+                mUserAge.setText(age);
+                mConditionsList.setText(condition);
+                mListMedicalAllergies.setText(medAllergies);
+                mUserName.setText(name);
+                mEmergencyContactThree.setText(phoneNumber);
+                mlistOtherAllergies.setText(otherAllegies);
+                mGender.setText(gender);
+                mBloodType.setText(bloodType);
+
+
+
+                String medCover= dataSnapshot.child("insuranceDetails").child("medCover").getValue().toString();
+                String  natId = dataSnapshot.child("insuranceDetails").child("natId").getValue().toString();
+                String policyNumber= dataSnapshot.child("insuranceDetails").child("policyNumber").getValue().toString();
+                String  prefHospital = dataSnapshot.child("insuranceDetails").child("prefHospital").getValue().toString();
+
+                mNationalId.setText(natId);
+                mPolicyNo.setText(policyNumber);
+                mMedCover.setText(medCover);
+                mPrefHospital.setText(prefHospital);
+
+
+
             }
 
             @Override
@@ -149,28 +166,6 @@ public class ProfileFragment extends Fragment  implements View.OnClickListener {
             }
         });
 
-//        reference.addValueEventListener(new ValueEventListener() {
 //
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//
-//                    EmergencyContacts emgContacts = dataSnapshot.child("emergencyContacts").getValue(EmergencyContacts.class);
-//
-//                Log.d("log this statement",emgContacts.getEmergencyContactNameOne());
-//                mEmergencyContactOne.setText( emgContacts.getEmergencyContactNameOne());
-//                mEmergencyContactOnePhone.setText( emgContacts.getEmergencyContactNumberOne());
-//                mEmergencyContactTwo.setText( emgContacts.getEmergencyContactNameTwo());
-//                mEmergencyContactTwoPhone.setText( emgContacts.getEmergencyContactNumberTwo());
-//                mEmergencyContactThree.setText( emgContacts.getEmergencyContactNameThree());
-//                mEmergencyContactThreePhone.setText( emgContacts.getEmergencyContactNameThree());
-//
-//            }
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                //System.out.println("The read failed: " + databaseError.getCode());
-//            }
-//        });
-//    }
-
     }
 }

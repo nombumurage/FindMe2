@@ -1,13 +1,179 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.findus.findme.MainFragment">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+
+    <ImageView
+        android:id="@+id/header_cover_image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="145dp"
+        android:scaleType="fitCenter"
+        android:background="#a5ca0707"
+        android:src="@drawable/maplogo3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-</FrameLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="140dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/header_cover_image"
+        android:layout_centerHorizontal="true">
+
+        <!--item1-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/linearLayout2">
+            <ImageView
+                android:id="@+id/img_row"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="7dp"
+                android:contentDescription="Thumbnail"
+                android:src="@drawable/nombu"/>\
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="#616161"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/img_row"
+                android:layout_toEndOf="@+id/img_row"
+                />
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_toRightOf="@+id/img_row"
+                android:layout_toEndOf="@+id/img_row"
+                android:layout_below="@+id/tvTitle"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <!--item2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/card1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout3">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#616161"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvDescription2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@+id/tvTitle2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:id="@+id/img2_row"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="Thumbnail"
+                android:src="@drawable/nombu"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_alignTop="@+id/tvTitle2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--item3-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:id="@+id/img_row3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="7dp"
+            android:contentDescription="Thumbnail"
+            android:src="@drawable/nombu"/>
+
+            <TextView
+                android:id="@+id/tvTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Title"
+                android:textColor="#616161"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/img_row3"
+                android:layout_toEndOf="@+id/img_row3"/>
+            <TextView
+                android:id="@+id/tvDescription3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Description"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_below="@+id/tvTitle3"
+                android:layout_toRightOf="@+id/img_row3"
+                android:layout_toEndOf="@+id/img_row3"/>
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>

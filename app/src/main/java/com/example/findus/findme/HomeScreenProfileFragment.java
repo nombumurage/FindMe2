@@ -35,6 +35,10 @@ public class HomeScreenProfileFragment extends Fragment implements View.OnClickL
     @Bind(R.id.listConditions) ListView mConditionsList;
     @Bind(R.id.listMedicalAllergies)ListView mListMedicalAllergies;
     @Bind(R.id.listotherAllergies) ListView mlistOtherAllergies;
+    @Bind(R.id.userNationalId) TextView mNationalId;
+    @Bind(R.id.insurancePolicyNo) TextView mPolicyNo;
+    @Bind(R.id.userMedCover) TextView mMedCover;
+    @Bind(R.id.userPrefHospital) TextView mPrefHospital;
 
 
 
