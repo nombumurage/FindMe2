@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/login_signup_bg"
     tools:context="com.example.findus.findme.SignUpActivity">
 
     <!-- signup progress -->
@@ -106,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:textColor="@color/colorIcons"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/login_btn_bg"
                     android:text="@string/action_sign_up"
                     android:textStyle="bold" />
 
