@@ -5,9 +5,16 @@
     tools:context="com.example.findus.findme.MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/editTextNotificationMessage"
+        android:layout_above="@+id/sendbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:hint="Enter notification message" />
 
 </FrameLayout>

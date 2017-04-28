@@ -38,6 +38,8 @@ dependencies {
     compile 'com.google.firebase:firebase-auth:10.2.0'
     compile 'io.nlopez.smartlocation:library:+'
     compile 'com.google.android.gms:play-services-gcm:10.2.0'
+    compile 'com.microsoft.azure:notification-hubs-android-sdk:0.4@aar'
+    compile 'com.microsoft.azure:azure-notifications-handler:1.0.1@aar'
     testCompile 'junit:junit:4.12'
 
     compile 'com.google.android.gms:play-services-maps:10.2.0'
