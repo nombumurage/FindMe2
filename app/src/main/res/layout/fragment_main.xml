@@ -5,7 +5,6 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.findus.findme.MainFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -209,7 +208,7 @@
                 android:layout_marginTop="320dp"
                 android:layout_marginLeft="200dp"
                 android:id="@+id/editTextNotificationMessage"
-                android:layout_above="@+id/sendbutton"
+                android:layout_below="@+id/go_profile"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="42dp"
                 android:hint="Enter notification message" />
