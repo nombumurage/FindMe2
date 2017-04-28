@@ -222,6 +222,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                     Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
 
                     if (!task.isSuccessful()) {
+                        showProgress(false);
                         Log.w(TAG, "signInWithEmail", task.getException());
                         Toast.makeText(LoginActivity.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
                     }
