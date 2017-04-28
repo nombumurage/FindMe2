@@ -44,17 +44,16 @@
                 android:elevation="4dp"
                 android:paddingBottom="24dp">
 
-
                 <ImageView
                     android:id="@+id/editProfile"
-                    android:layout_marginRight="5dp"
                     android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="346dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/ic_edit_black_24dp"
-                    android:contextClickable="true"/>
-
+                    android:contextClickable="true"
+                    android:layout_marginTop="13dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/bloodTypeField"
+                    android:layout_toEndOf="@+id/bloodTypeField" />
 
                 <TextView
                     android:id="@+id/user_profile_name"
@@ -90,12 +89,7 @@
                         android:textColor="#fff"
                         android:textSize="16sp" />
 
-
-
-
             </RelativeLayout>
-
-
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -105,34 +99,34 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="wrap_content">
 
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:id="@+id/genderField"
-                            android:layout_width="wrap_content"
-                            android:layout_height="70dp"
+                            android:layout_width="93dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="10dp"
                             android:paddingTop="3dp"
                             android:text="Gender"
                             android:textColor="#000" />
 
                         <TextView
                             android:id="@+id/gender"
-                            android:layout_width="fill_parent"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="6dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="10dp"
                             android:text=""
                             android:textColor="#000" />
 
@@ -142,34 +136,34 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp">
+                    android:layout_height="50dp">
 
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:id="@+id/ageField"
                             android:layout_width="93dp"
-                            android:layout_height="70dp"
+                            android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="10dp"
                             android:paddingTop="3dp"
                             android:text="Age"
                             android:textColor="#000" />
 
                         <TextView
                             android:id="@+id/userAge"
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="10dp"
                             android:text=""
                             android:textColor="#000" />
 
@@ -208,9 +202,8 @@
                         android:padding="10dp"
                         android:text="Name 1" />
 
-
                     <TextView                                                      android:id="@+id/emergencyContact1phone"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_marginBottom="3dp"
@@ -302,17 +295,18 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
+                    android:layout_height="50dp">
 
                 <GridLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
+                    android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/listConditions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#fff"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
                     android:textColor="#000"
                     android:layout_alignBottom="@+id/conditions">
                 </TextView>
@@ -335,14 +329,16 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
+                    android:layout_height="50dp">
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp">
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/listMedicalAllergies"
         android:layout_alignBottom="@+id/medicalAllergies"
         android:layout_width="match_parent"
+        android:paddingRight="2dp"
+        android:paddingLeft="2dp"
         android:textColor="#000"
         android:layout_height="wrap_content">
 
@@ -371,6 +367,8 @@
                     <TextView
                         android:id="@+id/listotherAllergies"                        android:layout_alignBottom="@+id/otherAllergies"
                         android:textColor="#000"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

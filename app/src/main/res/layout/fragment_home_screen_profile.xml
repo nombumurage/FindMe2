@@ -1,4 +1,5 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,15 +30,6 @@
                 android:background="@color/colorPrimary"
                 android:elevation="4dp"
                 android:paddingBottom="24dp">
-
-
-
-
-
-
-
-
-
             </RelativeLayout>
 
 
@@ -49,7 +41,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="match_parent">
                     <GridLayout
                         android:layout_width="match_parent"
@@ -57,14 +49,15 @@
 
                         <TextView
                             android:id="@+id/userNameField"
-                            android:layout_width="wrap_content"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
-                            android:text="        Name"
+                            android:padding="15dp"
+                            android:textAlignment="center"
+                            android:text="Name"
                             android:textColor="#000"/>
 
                         <TextView
@@ -75,7 +68,7 @@
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="15dp"
                             android:text=" "
                             android:textColor="#000"/>
 
@@ -84,7 +77,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="match_parent">
                     <GridLayout
                         android:layout_width="match_parent"
@@ -92,25 +85,26 @@
 
                         <TextView
                             android:id="@+id/genderField"
-                            android:layout_width="wrap_content"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
-                            android:text="      Gender"
+                            android:padding="15dp"
+                            android:text="Gender"
+                            android:textAlignment="center"
                             android:textColor="#000"/>
 
                         <TextView
                             android:id="@+id/gender"
-                            android:layout_width="fill_parent"
+                            android:layout_width="384dp"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="8dp"
+                            android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="15dp"
                             android:text="  "
                             android:textColor="#000"/>
 
@@ -119,7 +113,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="match_parent">
                     <GridLayout
                         android:layout_width="match_parent"
@@ -127,13 +121,14 @@
 
                         <TextView
                             android:id="@+id/bloodTypeField"
-                            android:layout_width="wrap_content"
+                            android:layout_width="110dp"
                             android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:background="#fff"
+                          android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:layout_margin="5dp"
+                            android:padding="15dp"
+                            android:textAlignment="center"
                             android:text="BloodType"
                             android:textColor="#000"/>
 
@@ -141,21 +136,21 @@
 
                         <TextView
                             android:id="@+id/bloodType"
-                            android:layout_width="fill_parent"
+                            android:layout_width="372dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
-                            android:text=" "
+                            android:padding="15dp"
+                            android:text=""
                             android:textColor="#000" />
                     </GridLayout>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="388dp"
                     android:layout_height="match_parent">
                     <GridLayout
                         android:layout_width="match_parent"
@@ -163,14 +158,14 @@
 
                         <TextView
                             android:id="@+id/AgeField"
-                            android:layout_width="115dp"
+                            android:layout_width="114dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
                             android:background="#fff"
                             android:clickable="true"
                             android:textAlignment="center"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="15dp"
                             android:text="Age"
                             android:textColor="#000"/>
 
@@ -184,7 +179,7 @@
                             android:background="#fff"
                             android:clickable="true"
                             android:elevation="4dp"
-                            android:padding="25dp"
+                            android:padding="15dp"
                             android:text=" "
                             android:textColor="#000" />
                     </GridLayout>
@@ -229,7 +224,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"   android:layout_toLeftOf="@+id/emergencyContact1phone"
+                        android:layout_marginTop="16dp"                              android:layout_toLeftOf="@+id/emergencyContact1phone"
                         android:src="@drawable/ic_phone_black_24dp" />
 
                     <TextView                                                      android:id="@+id/emergencyContact1phone"
@@ -339,14 +334,16 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
+                    android:layout_height="50dp">
 
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp">
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/listConditions"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignBottom="@+id/conditions">
@@ -374,13 +371,15 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
+                    android:layout_height="50dp">
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp">
+                        android:layout_height="match_parent">
                         <TextView
                             android:id="@+id/listMedicalAllergies"
                             android:layout_alignBottom="@+id/medicalAllergies"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -401,14 +400,16 @@
                     android:text="Other Allergies" />
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="70dp">
+                    android:layout_height="50dp">
                     <GridLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp">
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/listotherAllergies"                        android:layout_alignBottom="@+id/otherAllergies"
                             android:layout_width="match_parent"
+                            android:paddingRight="2dp"
+                            android:paddingLeft="2dp"
                             android:layout_height="wrap_content">
 
                         </TextView>
@@ -559,7 +560,7 @@
                         android:layout_marginLeft="10dp"
                         android:padding="10dp"
                         android:textColor="#000"
-                        android:text=" "/>
+                        android:text=""/>
                 </GridLayout>
 
 
