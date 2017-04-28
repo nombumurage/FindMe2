@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
         } else if (id == R.id.nav_userProfile) {
-            fragmentClass = InsuranceDetailFragment.class;
+            fragmentClass = ProfileFragment.class;
             try {
                 fragment = (Fragment) fragmentClass.newInstance();
             } catch (Exception e) {
@@ -201,7 +201,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
-        } else if (id == R.id.nav_location) {
+        }
+        else if (id == R.id.nav_location) {
             //fragmentClass = LocationFragment.class;
             if(mLocation == null){
                 Log.d("nomaree","kuchill msee");
