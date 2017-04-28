@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.nio.channels.Selector;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -34,7 +36,8 @@ public class MedicalDetailFragment extends Fragment implements  View.OnClickList
     @Bind(R.id.userFullName) EditText mUserFullName;
     @Bind(R.id.userPhoneNumber) EditText mUserPhoneNumber;
     @Bind(R.id.userAge) EditText mUserAge;
-    @Bind(R.id.gender_spinner) Spinner mGenderSpinner;
+    @Bind(R.id.gender_spinner)
+    Spinner mGenderSpinner;
     @Bind(R.id.bloodGroup_Spinner) Spinner mBloodGroupSpinner;
     @Bind(R.id.userMedicalConditions) EditText mUserMedicalConditions;
    // @Bind(R.id.addMedicalConditions) ImageButton mAddMedicalConditions;
@@ -88,8 +91,8 @@ public class MedicalDetailFragment extends Fragment implements  View.OnClickList
         String medicalAllergies = mUserMedAllergies.getText().toString();
         String otherAllergies = mUserAllergies.getText().toString();
         String phoneNumber = mUserPhoneNumber.getText().toString();
-       // String gender= mGenderSpinner.getItemIdAtPosition(mGenderSpinner.getSelectedItemPosition()).toString();
-       // String bloodGroup = mBloodGroupSpinner.getItemIdAtPosition(mBloodGroupSpinner.getSelectedItemPosition()).toString();
+        String gender= mGenderSpinner.getItemAtPosition(mGenderSpinner.getSelectedItemPosition()).toString();
+        String bloodGroup = mBloodGroupSpinner.getItemAtPosition(mBloodGroupSpinner.getSelectedItemPosition()).toString();
 
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
@@ -100,7 +103,7 @@ public class MedicalDetailFragment extends Fragment implements  View.OnClickList
 //        reference.child(phoneNumber).setValue(phoneNumber);
 //
 //
-        medicalDetails medDetails = new medicalDetails (username,userAge,phoneNumber, medicalConditions, medicalAllergies, otherAllergies);
+        medicalDetails medDetails = new medicalDetails (username,userAge,phoneNumber,gender,bloodGroup, medicalConditions, medicalAllergies, otherAllergies);
 
 //        Log.d(TAG, ">>> " + medDetails.getUserAllergies() + " >> " + medDetails.getAge());
 //
