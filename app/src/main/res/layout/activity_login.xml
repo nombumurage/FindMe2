@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/login_signup_bg"
     tools:context="com.example.findus.findme.LoginActivity">
 
     <!-- Login progress -->
@@ -47,7 +47,7 @@
                 android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="200dp"
                 android:layout_below="@+id/login_app_name"
                 android:orientation="vertical">
 
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:textColor="@color/colorIcons"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/login_btn_bg"
                     android:text="@string/action_sign_in"
                     android:textStyle="bold" />
 
