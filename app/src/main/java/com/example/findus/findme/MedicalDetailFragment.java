@@ -36,11 +36,9 @@ public class MedicalDetailFragment extends Fragment implements  View.OnClickList
     @Bind(R.id.userFullName) EditText mUserFullName;
     @Bind(R.id.userPhoneNumber) EditText mUserPhoneNumber;
     @Bind(R.id.userAge) EditText mUserAge;
-    @Bind(R.id.gender_spinner)
-    Spinner mGenderSpinner;
+    @Bind(R.id.gender_spinner) Spinner mGenderSpinner;
     @Bind(R.id.bloodGroup_Spinner) Spinner mBloodGroupSpinner;
     @Bind(R.id.userMedicalConditions) EditText mUserMedicalConditions;
-   // @Bind(R.id.addMedicalConditions) ImageButton mAddMedicalConditions;
     @Bind(R.id.userMedAllergies) EditText mUserMedAllergies;
     @Bind(R.id.userAllergies) EditText mUserAllergies;
     @Bind(R.id.userMedicalBtn) Button mUserSaveMedicalButton;
@@ -100,13 +98,9 @@ public class MedicalDetailFragment extends Fragment implements  View.OnClickList
 
 
         DatabaseReference  reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
-//        reference.child(phoneNumber).setValue(phoneNumber);
-//
-//
         medicalDetails medDetails = new medicalDetails (username,userAge,phoneNumber,gender,bloodGroup, medicalConditions, medicalAllergies, otherAllergies);
 
-//        Log.d(TAG, ">>> " + medDetails.getUserAllergies() + " >> " + medDetails.getAge());
-//
+
         reference.child("medicalDetails").setValue(medDetails);
 
         Toast.makeText(getActivity(), " Details Saved", Toast.LENGTH_SHORT).show();
