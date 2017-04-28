@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.findus.findme.R;
 import com.example.findus.findme.models.EmergencyContacts;
 import com.example.findus.findme.models.medicalDetails;
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,11 +21,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
+import static com.example.findus.findme.R.id.emergencyContact;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class EmergencyContactsFragment extends Fragment implements View.OnClickListener {
-    @Bind(R.id.emergencyContact) EditText mEmergencyContactName;
+    @Bind(emergencyContact) EditText mEmergencyContactName;
     @Bind(R.id.emergencyNumber) EditText mEmergencyNumber;
     @Bind(R.id.emergencyContact1) EditText mEmergencyContactName1;
     @Bind(R.id.emergencyNumber1) EditText mEmergencyNumber1;
@@ -32,9 +35,6 @@ public class EmergencyContactsFragment extends Fragment implements View.OnClickL
     @Bind(R.id.emergencyNumber2) EditText mEmergencyNumber2;
     @Bind(R.id.emergencyContactBtn) Button mEmergencyContactBtn;
 
-    public EmergencyContactsFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,9 +65,9 @@ public class EmergencyContactsFragment extends Fragment implements View.OnClickL
             mEmergencyContactName.setText("");
             mEmergencyNumber.setText("");
             mEmergencyContactName1.setText("");
-            mEmergencyNumber1.setText("");
+//            mEmergencyNumber1.setText("");
             mEmergencyContactName2.setText("");
-            mEmergencyNumber2.setText("");
+//            mEmergencyNumber2.setText("");
         }
     }
 
@@ -76,16 +76,16 @@ public class EmergencyContactsFragment extends Fragment implements View.OnClickL
         String emergencyContactName = mEmergencyContactName.getText().toString();
         String emergencyContactNumber = mEmergencyNumber.getText().toString();
         String emergencyContactName1 = mEmergencyContactName1.getText().toString();
-        String emergencyContactNumber1 = mEmergencyNumber1.getText().toString();
+//        String emergencyContactNumber1 = mEmergencyNumber1.getText().toString();
         String emergencyContactName2 = mEmergencyContactName2.getText().toString();
-        String emergencyContactNumber2 = mEmergencyNumber2.getText().toString();
+//        String emergencyContactNumber2 = mEmergencyNumber2.getText().toString();
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
         String uid=users.getUid();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 
-        EmergencyContacts emergencyContact = new EmergencyContacts (emergencyContactName,emergencyContactNumber,emergencyContactName1,emergencyContactNumber1,emergencyContactName2,emergencyContactNumber2);
+//        EmergencyContacts emergencyContact = new EmergencyContacts (emergencyContactName,emergencyContactNumber,emergencyContactName1,emergencyContactNumber1,emergencyContactName2,emergencyContactNumber2);
 
         reference.child("emergencyContacts").setValue(emergencyContact);
 

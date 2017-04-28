@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
             android:id="@+id/nav_medDetails"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_person_black_24dp"
             android:title="User Details" />
         <item
             android:id="@+id/nav_contacts"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_contact_phone_black_24dp"
             android:title="Emergency Contacts" />
         <item
             android:id="@+id/nav_insurance"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_content_paste_black_24dp"
             android:title="Insurance" />
         <item
             android:id="@+id/nav_userProfile"
@@ -24,7 +24,7 @@
             android:title="User Profile"/>
         <item
             android:id="@+id/nav_location"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_person_pin_circle_black_24dp"
             android:title="Location" />
     </group>
 
@@ -40,7 +40,7 @@
                 android:title="Send" />
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
                 android:title="Logout" />
         </menu>
     </item>
