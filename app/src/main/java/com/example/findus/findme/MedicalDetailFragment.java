@@ -4,6 +4,8 @@ package com.example.findus.findme;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -78,6 +80,13 @@ public class MedicalDetailFragment extends Fragment implements  View.OnClickList
             mUserMedAllergies.setText("");
             mUserAllergies.setText("");
             mUserPhoneNumber.setText("");
+            mUserPhoneNumber.setText("");
+
+            Fragment emgCont = new EmergencyContactsFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.mainFrame,emgCont);
+            transaction.commit();
         }
     }
 
