@@ -23,10 +23,6 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class LocationFragment extends Fragment implements OnMapReadyCallback{
     double lat = 0;
     double lon = 0;
@@ -86,6 +82,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
 
         return rootView;
     }
+
     @Override
     public void onMapReady(GoogleMap map) {
         LatLng latLng = new LatLng(lat,lon);
