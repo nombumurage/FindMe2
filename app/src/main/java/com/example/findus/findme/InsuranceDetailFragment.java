@@ -4,6 +4,8 @@ package com.example.findus.findme;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +64,11 @@ public class InsuranceDetailFragment extends Fragment implements View.OnClickLis
             mMedCover.setText("");
             mPrefHospital.setText("");
 
+            Fragment getStarted = new MainFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.mainFrame,getStarted);
+            transaction.commit();
         }
     }
 

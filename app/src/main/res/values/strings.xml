@@ -46,6 +46,8 @@
         <item>O-</item>
         <item>Unknown</item>
     </string-array>
+    <string name="title_activity_get_started">Get Started</string>
+    <string name="title_dashboard">Dashboard</string>
 
     <!--String related to first Aid Details-->
     <string name="Nose_Bleeding">Nose Bleeding:</string>

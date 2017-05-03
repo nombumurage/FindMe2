@@ -3,6 +3,8 @@ package com.example.findus.findme;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,9 +67,15 @@ public class EmergencyContactsFragment extends Fragment implements View.OnClickL
             mEmergencyContactName.setText("");
             mEmergencyNumber.setText("");
             mEmergencyContactName1.setText("");
-//            mEmergencyNumber1.setText("");
+            mEmergencyNumber1.setText("");
             mEmergencyContactName2.setText("");
-//            mEmergencyNumber2.setText("");
+            mEmergencyNumber2.setText("");
+
+            Fragment InsuranceDetail = new InsuranceDetailFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.mainFrame,InsuranceDetail);
+            transaction.commit();
         }
     }
 
@@ -76,16 +84,16 @@ public class EmergencyContactsFragment extends Fragment implements View.OnClickL
         String emergencyContactName = mEmergencyContactName.getText().toString();
         String emergencyContactNumber = mEmergencyNumber.getText().toString();
         String emergencyContactName1 = mEmergencyContactName1.getText().toString();
-//        String emergencyContactNumber1 = mEmergencyNumber1.getText().toString();
+        String emergencyContactNumber1 = mEmergencyNumber1.getText().toString();
         String emergencyContactName2 = mEmergencyContactName2.getText().toString();
-//        String emergencyContactNumber2 = mEmergencyNumber2.getText().toString();
+        String emergencyContactNumber2 = mEmergencyNumber2.getText().toString();
 
         FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
         String uid=users.getUid();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 
-//        EmergencyContacts emergencyContact = new EmergencyContacts (emergencyContactName,emergencyContactNumber,emergencyContactName1,emergencyContactNumber1,emergencyContactName2,emergencyContactNumber2);
+        EmergencyContacts emergencyContact = new EmergencyContacts (emergencyContactName,emergencyContactNumber,emergencyContactName1,emergencyContactNumber1,emergencyContactName2,emergencyContactNumber2);
 
         reference.child("emergencyContacts").setValue(emergencyContact);
 

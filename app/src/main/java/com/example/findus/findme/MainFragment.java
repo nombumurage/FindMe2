@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -55,11 +55,17 @@ public class MainFragment extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), FirstAidActivity.class);
             startActivity(intent);
         }if (v == mGetStarted){
-            Intent intent = new Intent(getActivity(), GetStartedActivity.class);
-            startActivity(intent);
+            Fragment getStarted = new GetStartedIntroFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.mainFrame,getStarted);
+            transaction.commit();
         }if (v == mGoProfile){
-            Intent intent = new Intent(getActivity(), ProfileFragment.class);
-            startActivity(intent);
+            Fragment ProfFrag = new ProfileFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.mainFrame,ProfFrag);
+            transaction.commit();
         }
     }
 }
