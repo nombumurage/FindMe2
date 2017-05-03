@@ -102,7 +102,9 @@
         </receiver>
 
         <!-- End of Microsoft Azure Push Notification services -->
+
 <!--   pauline     -->
+
         <receiver android:name=".AlertWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

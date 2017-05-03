@@ -68,82 +68,82 @@ public class AlertWidget extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-//        // There may be multiple widgets active, so update all of them
-//            final int N = appWidgetIds.length;
-//
-//            // Perform this loop procedure for each App Widget that belongs to this provider
-//            for (int i=0; i<N; i++) {
-//                int appWidgetId = appWidgetIds[i];
-//
-//                sendSms();
-//
-//                // Create an Intent to launch ExampleActivity
-//                Intent intent = new Intent(context, HomeScreenProfile.class);
-//                PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
-//
-//                // Get the layout for the App Widget and attach an on-click listener
-//                //  to the button
-//
-//                RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
-//                views.setOnClickPendingIntent(R.id.header_cover_image, pendingIntent);
-//                views.getClass();
-//                // Tell the AppWidgetManager to perform an update on the current app widget
-//                appWidgetManager.updateAppWidget(appWidgetId, views);
-//            }
-//
-//        for (int i=0; i<N; i++) {
-//            int appWidgetId = appWidgetIds[i];
-//
-//            Intent intentnew = new Intent(context, AlertWidget.class);
-//            PendingIntent pendingIntentnew = PendingIntent.getActivity(context, 0, intentnew, 0);
-//
-//            // Get the layout for the App Widget and attach an on-click listener
-//            //  to the button
-//            getProfileData();
-//            RemoteViews viewsnew = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
-//            viewsnew.setOnClickPendingIntent(R.id.PhoneimageButton,pendingIntentnew);
-//            viewsnew.getClass();
-//
-//            // Tell the AppWidgetManager to perform an update on the current app widget
-//            appWidgetManager.updateAppWidget(appWidgetId, viewsnew);
-//        }
-//
-//    }
-//
-//
-//
-//    public void  sendSms(){
-//
-//        FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
-//        String uid = users.getUid();
-//
-//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
-//
-//        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                //emergency contact model
-//                String person1Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberOne").getValue().toString();
-//                String person2Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberTwo").getValue().toString();
-//                String person3Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberThree").getValue().toString();
-//
-//                SmsManager manager = SmsManager.getDefault();
-//                String locationUri= String.format("Hey am in danger. My Current Location: \nhttps://www.google.com/maps/@%f,%f,11z\n",42.585444,13.007813);
-//
-//
-//                String[] phoneNums = {person1Cont,person2Cont,person3Cont};
-//
-//                for (String num : phoneNums) {
-//                    manager.sendTextMessage(num,null,locationUri,null,null);
-//                }
-//
-//            }
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-//
+        // There may be multiple widgets active, so update all of them
+            final int N = appWidgetIds.length;
+
+            // Perform this loop procedure for each App Widget that belongs to this provider
+            for (int i=0; i<N; i++) {
+                int appWidgetId = appWidgetIds[i];
+
+                sendSms();
+
+                // Create an Intent to launch ExampleActivity
+                Intent intent = new Intent(context, HomeScreenProfile.class);
+                PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+
+                // Get the layout for the App Widget and attach an on-click listener
+                //  to the button
+
+                RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
+                views.setOnClickPendingIntent(R.id.header_cover_image, pendingIntent);
+                views.getClass();
+                // Tell the AppWidgetManager to perform an update on the current app widget
+                appWidgetManager.updateAppWidget(appWidgetId, views);
+            }
+
+        for (int i=0; i<N; i++) {
+            int appWidgetId = appWidgetIds[i];
+
+            Intent intentnew = new Intent(context, AlertWidget.class);
+            PendingIntent pendingIntentnew = PendingIntent.getActivity(context, 0, intentnew, 0);
+
+            // Get the layout for the App Widget and attach an on-click listener
+            //  to the button
+            getProfileData();
+            RemoteViews viewsnew = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
+            viewsnew.setOnClickPendingIntent(R.id.PhoneimageButton,pendingIntentnew);
+            viewsnew.getClass();
+
+            // Tell the AppWidgetManager to perform an update on the current app widget
+            appWidgetManager.updateAppWidget(appWidgetId, viewsnew);
+        }
+
+    }
+
+
+
+    public void  sendSms(){
+
+        FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = users.getUid();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
+
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //emergency contact model
+                String person1Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberOne").getValue().toString();
+                String person2Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberTwo").getValue().toString();
+                String person3Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberThree").getValue().toString();
+
+                SmsManager manager = SmsManager.getDefault();
+                String locationUri= String.format("Hey am in danger. My Current Location: \nhttps://www.google.com/maps/@%f,%f,11z\n",42.585444,13.007813);
+
+
+                String[] phoneNums = {person1Cont,person2Cont,person3Cont};
+
+                for (String num : phoneNums) {
+                    manager.sendTextMessage(num,null,locationUri,null,null);
+                }
+
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
 
     }
