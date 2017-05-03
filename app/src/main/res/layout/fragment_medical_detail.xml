@@ -24,11 +24,11 @@
                 android:id="@+id/linearLayout">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Medical Profile "
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="45dp"
+                    android:textSize="30dp"
                     android:textStyle="bold"
                     android:layout_above="@+id/linearLayout"
                     android:layout_centerHorizontal="true"
@@ -93,7 +93,8 @@
                 <android.support.v7.widget.AppCompatSpinner
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/gender_spinner"           android:nextFocusDown="@+id/bloodGroup_Spinner"
+                    android:id="@+id/gender_spinner"
+                    android:nextFocusDown="@+id/bloodGroup_Spinner"
                     android:background="@android:color/white"
                     android:entries="@array/user_gender"
                     android:textColorHint="@color/colorDivider"
@@ -145,8 +146,7 @@
                         android:textColorHint="@color/colorDivider"
                         android:textSize="20sp"
                         android:inputType="textMultiLine"
-                        android:layout_marginBottom="10dp"
-                        />
+                        android:layout_marginBottom="10dp" />
 
                 </android.support.v7.widget.LinearLayoutCompat>
 
@@ -162,8 +162,7 @@
                     android:textColorHint="@color/colorDivider"
                     android:textSize="20sp"
                     android:inputType="textMultiLine"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:layout_marginBottom="10dp" />
 
                 <EditText
                     android:id="@+id/userAllergies"
@@ -177,8 +176,7 @@
                     android:textColorHint="@color/colorDivider"
                     android:textSize="20sp"
                     android:inputType="textMultiLine"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:layout_marginBottom="10dp" />
 
                 <Button
                     android:id="@+id/userMedicalBtn"

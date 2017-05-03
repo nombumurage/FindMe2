@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.findus.findme.firstAidDetail.OpenWoundsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context="com.example.findus.findme.firstAidDetail.FaintingFragment">
+    <!--  TODO: Update blank fragment layout  -->
+    <RelativeLayout android:id="@+id/img_holder" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#fff">
+        <ImageView android:id="@+id/wounds" android:layout_width="wrap_content" android:layout_height="200dp" app:srcCompat="@drawable/wounds" android:scaleType="fitXY" android:layout_gravity="center" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:textAlignment="center" android:id="@+id/scrollView2" android:layout_below="@+id/img_holder">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/open_wounds" android:layout_centerHorizontal="true" android:layout_marginTop="16dp" android:orientation="vertical" android:layout_margin="@dimen/activity_vertical_margin">
+            <TextView android:id="@+id/wound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_gravity="center" android:layout_marginTop="10dp" android:text="@string/Open" android:textSize="20sp" android:textStyle="bold" android:layout_marginBottom="2dp"/>
+            <TextView android:id="@+id/open_wounds_steps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_marginTop="5dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:text="@string/Open_Wounds_steps" android:textSize="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
+</FrameLayout>
