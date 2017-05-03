@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -45,6 +46,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.0'
     compile 'com.microsoft.azure:notification-hubs-android-sdk:0.4@aar'
     compile 'com.microsoft.azure:azure-notifications-handler:1.0.1@aar'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

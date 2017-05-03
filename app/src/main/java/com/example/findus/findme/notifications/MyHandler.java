@@ -28,9 +28,9 @@ public class MyHandler extends NotificationsHandler {
         ctx = context;
         String nhMessage = bundle.getString("message");
         sendNotification(nhMessage);
-        if (MainActivity.isVisible) {
-            MainActivity.mainActivity.ToastNotify(nhMessage);
-        }
+//        if (MainActivity.isVisible) {
+////            MainActivity.mainActivity.ToastNotify(nhMessage);
+//        }
     }
 
     private void sendNotification(String msg) {
@@ -47,8 +47,8 @@ public class MyHandler extends NotificationsHandler {
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(ctx)
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setContentTitle("Notification Hub Demo")
+                        .setSmallIcon(R.drawable.maplogo3)
+                        .setContentTitle("Find Me Alerts")
                         .setStyle(new NotificationCompat.BigTextStyle()
                                 .bigText(msg))
                         .setSound(defaultSoundUri)

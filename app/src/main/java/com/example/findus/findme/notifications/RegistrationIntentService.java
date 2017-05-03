@@ -53,7 +53,7 @@ public class RegistrationIntentService extends IntentService {
                 // regID = hub.register(token, "tag1,tag2").getRegistrationId();
 
                 resultString = "New NH Registration Successfully - RegId : " + regID;
-                Log.d(TAG, resultString);
+//                Log.d(TAG, resultString);
 
                 sharedPreferences.edit().putString("registrationID", regID ).apply();
                 sharedPreferences.edit().putString("FCMtoken", FCM_token ).apply();
@@ -88,8 +88,8 @@ public class RegistrationIntentService extends IntentService {
         }
 
         // Notify UI that registration has completed.
-        if (MainActivity.isVisible) {
-            MainActivity.mainActivity.ToastNotify(resultString);
-        }
+//        if (MainActivity.isVisible) {
+//            MainActivity.mainActivity.ToastNotify(resultString);
+//        }
     }
 }
