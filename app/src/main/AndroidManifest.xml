@@ -17,7 +17,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/maplogo3"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -26,10 +26,10 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBVditgHm0__g3s6lA9z8eeArOe298lRHU" />
-
+      
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="Find Me"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +41,6 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/NoAppTheme">
-
         </activity>
         <activity
             android:name=".SignUpActivity"
@@ -50,6 +49,16 @@
             android:name=".FirstAidActivity"
             android:label="First Aid Tips"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GetStartedActivity"
+            android:label="How To Get Started"
+            android:parentActivityName=".MainActivity" />
+      
+         <activity android:name=".FirstAidDetailActivity">
+           <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.findus.findme.FirstAidActivity" />
+        </activity>
 
         <!-- Start of Things to do with Push notification services of Microsoft Azure -->
         <meta-data
@@ -70,12 +79,11 @@
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-
-                <category android:name="com.example.nombu.findme" />
+                <category android:name="com.example.nombu.findus.findme" />
             </intent-filter>
         </receiver>
-
         <!-- End of Microsoft Azure Push Notification services -->
+
     </application>
 
 </manifest>
