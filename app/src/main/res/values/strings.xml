@@ -47,4 +47,109 @@
         <item>Unknown</item>
     </string-array>
 
+    <!--String related to first Aid Details-->
+    <string name="Nose_Bleeding">Nose Bleeding:</string>
+    <string name="steps"> 1.    Get them to sit down (not lie down) as keeping the nose above  the heart will reduce bleeding.\n\n
+        2.Get them to lean forward (not backwards), to make sure the blood drains out through their nose, rather than down their throat which could block their airway.\n\n
+        3.Ask them to breathe through their mouth and pinch the soft part of the nose, taking a brief pause every ten minutes, until the bleeding stops.\n\n
+        4. Apply an ice pack to your nose and cheeks\n\n
+        5. Keep pinching for a full 10 minutes. \n\n
+        6.Check to see if your nose is still bleeding after 10 minutes.\</string>
+    <string name="Fainting">Fainting:</string>
+    <string name="Fainting_steps"> 1.Position the person on his or her back. If the person is breathing, restore blood flow to the brain by raising the person\'s legs above heart level.\n\n
+        2.Get them to lean forward (not backwards), to make sure the blood drains out through their nose, rather than down their throat which could block their airway.\n\n
+        3.Ask them to breathe through their mouth and pinch the soft part of the nose, taking a brief pause every ten minutes, until the bleeding stops.\n\n
+        4. Apply an ice pack to your nose and cheeks\n\n
+        5. Keep pinching for a full 10 minutes. \n\n
+        6.Check to see if your nose is still bleeding after 10 minutes.\</string>
+
+
+    <string name="Burns">Burns:</string>
+    <string name="Burns_steps"> 1. Cool Burn Hold burned skin under cool (not cold) running water or immerse in cool water until pain subsides.
+        Use compresses if running water isn’t available.\n
+        2. Protect Burn\n Cover with sterile, non-adhesive bandage or clean cloth.
+        Do not apply butter or ointments, which can cause infection.\n
+        3. Treat Pain Give over-the-counter pain reliever such as ibuprofen (Advil, Motrin), acetaminophen (Tylenol), or naproxen (Aleve).\n
+        4. When to See a Doctor Seek medical help if:\n You see signs of infection, like increased pain, redness, swelling, fever, or oozing.
+        The person needs tetanus or booster shot, depending on date of last injection.\nTetanus booster should be given every 10 years.
+        Redness and pain last more than a few hours.
+        Pain worsens.\n
+    </string>
+    <string name="Suffocation">Suffocation:</string>
+    <string name="Suffocation_steps">1. Ensure the airway is open\n
+        2.In case of drowning, tilt the client to one side with head down\n
+        3.If strangulation is the cause then remove the band that is constricting the throat\n
+        4.In case of suffocation by gases remove the victim as soon as possible to fresh air\n
+        5.If suffocation is caused due to swelling of the throat or asthma make the victim sit upright and ensure there is a free supply of fresh air\n
+        6.Loosen the clothing surrounding the neck\n
+        7.If breathing does not restore then start artificial respiration
+    </string>
+
+    <string name="Choking">Choking:</string>
+    <string name="Choking_steps">1.Give 5 back blows. First, deliver five back blows between the person\'s shoulder blades with the heel of your hand.\n
+        2.Give 5 abdominal thrusts. Perform five abdominal thrusts (also known as the Heimlich maneuver).\n
+        3.Alternate between 5 blows and 5 thrusts until the blockage is dislodged.\n
+    </string>
+
+    <string name="Drown">Drowning:</string>
+    <string name="Drowning_steps">1. Get Help Notify a lifeguard, if one is close. If not, ask someone to call 999. If you are alone, follow the steps below.\n
+        2. Move the Person Take the person out of the water.\n
+        3. Check for Breathing:\n Place your ear next to the person\'s mouth and nose. Do you feel air on your cheek?
+        Look to see if the person\'s chest is moving.\n
+        4. If the Person is Not Breathing, Check Pulse Check the person\'s pulse for 10 seconds.\n
+        5. If There is No Pulse, Start CPR Carefully place person on back.
+    </string>
+
+    <string name="Open">Open Wounds:</string>
+    <string name="Open_Wounds_steps">1. Get Help
+
+CALL 999 IF:\n
+Bleeding is severe\n
+You suspect internal bleeding\n
+There is an abdominal or chest wound\n
+Bleeding can\'t be stopped after 10 minutes of firm and steady pressure\n
+Blood spurts out of wound\n\n
+
+        1. Stop Bleeding\n
+
+Apply direct pressure on the cut or wound with a clean cloth, tissue, or piece of gauze until bleeding stops.
+If blood soaks through the material, don’t remove it.\n Put more cloth or gauze on top of it and continue to apply pressure.
+If the wound is on the arm or leg, raise limb above the heart, if possible, to help slow bleeding.\n
+Wash your hands again after giving first aid and before cleaning and dressing the wound.\n
+Do not apply a tourniquet unless the bleeding is severe and not stopped with direct pressure.
+
+2. Clean Cut or Wound
+
+Gently clean with soap and warm water.\n Try to rinse soap out of wound to prevent irritation.
+Don’t use hydrogen peroxide or iodine, which can damage tissue.\n\n
+3. Protect the Wound\n
+
+Apply antibiotic cream to reduce risk of infection and cover with a sterile bandage.
+Change the bandage daily to keep the wound clean and dry.
+    </string>
+
+    <string name="Vomit">Vomiting:</string>
+    <string name="Vomit_steps">1.Do not attempt to hold the vomit in. Allow the person to vomit as long as needed.\n\n
+2.Using a clean and slightly wet cloth, wipe the face of the person.\n\n
+3.After the person is done vomiting, assist them into drinking small but frequent amounts of clear fluids, such as water, sports drinks or fruit juices. This can help prevent dehydration.\n\n
+4.Do not give caffeine, alcohol and other diuretics to avoid losing even more fluids in the body.\n\n
+5.Do not give milk as it may irritate the stomach.\n\n
+6.Start by giving the person light and bland foods such as bread and crackers. Do not give heavy, solid foods until vomiting has stopped.\n\n
+    </string>
+
+    <string name="Joint">Joint Injury:</string>
+    <string name="Joint_injury_steps">1.Resting an injured area reduces the stress and strain which, in turn, reduces the chance of further injury. When an injury occurs, immediately stop using the injured area.\n\n
+
+2.Ice applied to an injured joint or muscle reduces swelling and bleeding by slowing blood flow to the area.\n\n
+
+3.Compression (wrapping or taping the area of injury) reduces swelling and gives extra support to injured tissues. Compression applies primarily to the extremities (arms and legs).\n\n
+
+4.Elevation of the injured body part above the level of the heart slows blood flow to the area by forcing the heart to pump "uphill." Reducing blood flow reduces swelling. Elevation applies primarily to injuries involving the extremities (arms, legs, feet and hands).\n\n
+
+Heat or Cold: Which to Use?\n\n
+
+Actually, heat and cold are both important components of recovery following an injury, but it\'s important to understand which to use and how to achieve maximum benefit. Remember these general rules when considering whether to apply ice or heat:\n\n
+    </string>
+
+
 </resources>

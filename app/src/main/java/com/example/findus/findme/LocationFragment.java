@@ -94,10 +94,10 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
             MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(getActivity(), R.raw.style);
             map.setMapStyle(style);
             map.addMarker(new MarkerOptions()
-                    .position(latLng).title("Find Me").snippet("Susan Njoroge: 29,Female, (AB-), Asthmatic. Allergic to Napronex")
+                    .position(latLng).title("Find Me").snippet("")
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
                     .draggable(false).visible(true));
-            map.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12.0f));
         }
     }
 

@@ -15,7 +15,7 @@
             android:layout_height="match_parent">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/aid_0"
+                android:id="@+id/nose_bleeding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/cardview_default_elevation"
@@ -28,16 +28,16 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_width="35dp"
+                        android:layout_width="45dp"
                         android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:src="@drawable/get_started_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Nose Breeding"
+                        android:text="Nose Bleeding"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -48,8 +48,8 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/aid_1"
-                android:layout_below="@+id/aid_0"
+                android:id="@+id/fainting"
+                android:layout_below="@+id/nose_bleeding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/cardview_default_elevation"
@@ -62,9 +62,9 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_width="35dp"
+                        android:layout_width="45dp"
                         android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:src="@drawable/get_started_icon" />
 
@@ -82,8 +82,8 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/aid_2"
-                android:layout_below="@+id/aid_1"
+                android:id="@+id/fire_burns"
+                android:layout_below="@+id/fainting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/cardview_default_elevation"
@@ -96,9 +96,9 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:layout_width="35dp"
+                        android:layout_width="45dp"
                         android:layout_height="35dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:src="@drawable/get_started_icon" />
 
@@ -106,6 +106,279 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Fire Burns"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/faint"
+                android:layout_below="@+id/fire_burns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Faint"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/suffocation"
+                android:layout_below="@+id/fire_burns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Suffocation"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/choking"
+                android:layout_below="@+id/suffocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="choking"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/drowning"
+                android:layout_below="@+id/choking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="drowning"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/open_wounds"
+                android:layout_below="@+id/drowning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Open Wounds"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/vomiting"
+                android:layout_below="@+id/open_wounds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="vomiting"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cold"
+                android:layout_below="@+id/joints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cold"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/joints"
+                android:layout_below="@+id/vomiting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/get_started_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Joints"
                         android:textAlignment="center"
                         android:textSize="20sp"
                         android:textStyle="bold"
