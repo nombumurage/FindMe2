@@ -46,6 +46,12 @@
         <item>O-</item>
         <item>Unknown</item>
     </string-array>
+
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="configure">Configure</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_home_screen_profile">HomeScreenProfile</string>
+
     <string name="title_activity_get_started">Get Started</string>
     <string name="title_dashboard">Dashboard</string>
 
@@ -152,6 +158,7 @@ Heat or Cold: Which to Use?\n\n
 
 Actually, heat and cold are both important components of recovery following an injury, but it\'s important to understand which to use and how to achieve maximum benefit. Remember these general rules when considering whether to apply ice or heat:\n\n
     </string>
+
 
 
 </resources>

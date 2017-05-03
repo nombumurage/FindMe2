@@ -241,8 +241,6 @@ public class ProfileFragment extends Fragment  implements View.OnClickListener {
                 mMedCover.setText(medCover);
                 mPrefHospital.setText(prefHospital);
 
-
-
             }
 
             @Override
