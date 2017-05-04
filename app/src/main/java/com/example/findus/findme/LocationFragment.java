@@ -66,19 +66,18 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
         mMapView.onCreate(savedInstanceState);
         mMapView.getMapAsync(this);
 
-        mFab = (FloatingActionButton) rootView.findViewById(R.id.fab);
-        mFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        mFab = (FloatingActionButton) rootView.findViewById(R.id.fab);
+//        mFab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         final String text = String.format("Latitude %.6f, Longitude %.6f",
-                lat,
-                lon);
-        Log.d("location", text);
+                lat, lon);
+        Log.d(">>>>>>>>>>>>>>>>", text);
 
         return rootView;
     }
@@ -86,6 +85,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
     @Override
     public void onMapReady(GoogleMap map) {
         LatLng latLng = new LatLng(lat,lon);
+
 
         if (map != null) {
             MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(getActivity(), R.raw.style);
