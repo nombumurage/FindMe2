@@ -50,10 +50,10 @@
             android:name=".FirstAidActivity"
             android:label="First Aid Tips"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".GetStartedActivity"
-            android:label="How To Get Started"
-            android:parentActivityName=".MainActivity" />
+        <!--<activity-->
+            <!--android:name=".GetStartedActivity"-->
+            <!--android:label="How To Get Started"-->
+            <!--android:parentActivityName=".MainActivity" />-->
 
       
          <activity android:name=".FirstAidDetailActivity">
@@ -120,15 +120,15 @@
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MyActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation"
-            android:excludeFromRecents="true"
-            android:launchMode="singleInstance"
-            android:screenOrientation="nosensor"
-            android:showOnLockScreen="true"
-            android:taskAffinity=""
-            android:theme="@style/AppTheme" />
+        <!--<activity-->
+            <!--android:name=".MyActivity"-->
+            <!--android:configChanges="orientation|screenSize|keyboardHidden|keyboard|navigation"-->
+            <!--android:excludeFromRecents="true"-->
+            <!--android:launchMode="singleInstance"-->
+            <!--android:screenOrientation="nosensor"-->
+            <!--android:showOnLockScreen="true"-->
+            <!--android:taskAffinity=""-->
+            <!--android:theme="@style/AppTheme" />-->
         <activity
             android:name=".HomeScreenProfile"
             android:label="@string/title_activity_home_screen_profile"

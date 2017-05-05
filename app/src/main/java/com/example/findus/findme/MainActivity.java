@@ -289,11 +289,14 @@ public class MainActivity extends AppCompatActivity
     }
     public Location showLocation(Location location) {
         if (location != null) {
+
             return  location;
         } else {
             return location;
         }
     }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -323,7 +326,7 @@ public class MainActivity extends AppCompatActivity
                         .show();
             } else {
                 Log.i(TAG, "This device is not supported by Google Play Services.");
-                ToastNotify("This device is not supported by Google Play Services.");
+//                ToastNotify("This device is not supported by Google Play Services.");
                 finish();
             }
             return false;
@@ -364,16 +367,16 @@ public class MainActivity extends AppCompatActivity
         isVisible = false;
     }
 
-    public void ToastNotify(final String notificationMessage) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(MainActivity.this, notificationMessage, Toast.LENGTH_LONG).show();
-                //TextView helloText = (TextView) findViewById(R.id.text_hello);
-                //helloText.setText(notificationMessage);
-            }
-        });
-    }
+//    public void ToastNotify(final String notificationMessage) {
+//        runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                Toast.makeText(MainActivity.this, notificationMessage, Toast.LENGTH_LONG).show();
+//                //TextView helloText = (TextView) findViewById(R.id.text_hello);
+//                //helloText.setText(notificationMessage);
+//            }
+//        });
+//    }
 
     /**
      * Example code from http://msdn.microsoft.com/library/azure/dn495627.aspx
@@ -446,7 +449,7 @@ public class MainActivity extends AppCompatActivity
                     + signature + "&se=" + expires + "&skn=" + HubSasKeyName;
         } catch (Exception e) {
             if (isVisible) {
-                ToastNotify("Exception Generating SaS : " + e.getMessage().toString());
+//                ToastNotify("Exception Generating SaS : " + e.getMessage().toString());
             }
         }
 
@@ -515,7 +518,7 @@ public class MainActivity extends AppCompatActivity
                                 builder.append(line);
                             }
 
-                            ToastNotify(builder.toString());
+//                            ToastNotify(builder.toString());
                         }
                     } finally {
                         urlConnection.disconnect();
@@ -524,7 +527,7 @@ public class MainActivity extends AppCompatActivity
                 catch(Exception e)
                 {
                     if (isVisible) {
-                        ToastNotify("Exception Sending Notification : " + e.getMessage().toString());
+//                        ToastNotify("Exception Sending Notification : " + e.getMessage().toString());
                     }
                 }
             }

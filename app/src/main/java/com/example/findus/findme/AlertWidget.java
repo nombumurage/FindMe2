@@ -129,8 +129,6 @@ public class AlertWidget extends AppWidgetProvider {
 
                 SmsManager manager = SmsManager.getDefault();
                 String locationUri= String.format("Hey am in danger. My Current Location: \nhttps://www.google.com/maps/@%f,%f,11z\n",42.585444,13.007813);
-
-
                 String[] phoneNums = {person1Cont,person2Cont,person3Cont};
 
                 for (String num : phoneNums) {
