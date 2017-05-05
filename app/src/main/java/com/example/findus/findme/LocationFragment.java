@@ -95,7 +95,9 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
         reference= FirebaseDatabase.getInstance().getReference("user").child(uid);
 
         LatLng latLng = new LatLng(lat,lon);
-        reference.child("Location").setValue(latLng);
+
+        reference.child("location").setValue(latLng);
+
 
     }
 
@@ -162,4 +164,3 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
 
 
 }
-

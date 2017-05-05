@@ -258,6 +258,7 @@ public class MainActivity extends AppCompatActivity
                 }
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.mainFrame, fragment).commit();
+                ;
             }
 
         } else if (id == R.id.nav_logout){
