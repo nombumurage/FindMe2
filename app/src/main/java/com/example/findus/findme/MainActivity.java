@@ -1,5 +1,6 @@
 package com.example.findus.findme;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -71,6 +72,9 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnLocationUpdatedListener,
         OnActivityUpdatedListener{
 
+    @Bind(R.id.nav_send)
+    MenuItem mSend;
+
     //Push notifications for Microsoft Azure
     private String HubEndpoint = null;
     private String HubSasKeyName = null;
@@ -92,6 +96,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -263,7 +269,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout){
             logout();
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -530,6 +535,4 @@ public class MainActivity extends AppCompatActivity
             }
         }.start();
     }
-
-
 }
