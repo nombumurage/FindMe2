@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.telephony.SmsManager;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.example.findus.findme.AlertWidgetConfigureActivity;
@@ -21,12 +22,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * Implementation of App Widget functionality.
  * App Widget Configuration implemented in {@link AlertWidgetConfigureActivity AlertWidgetConfigureActivity}
  */
 public class AlertWidget extends AppWidgetProvider {
 
+    public  static final  String TAG = AlertWidget.class.getSimpleName();
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
@@ -57,39 +62,41 @@ public class AlertWidget extends AppWidgetProvider {
                 Intent intent = new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse("tel:=" + dataPhoneNumberOne));
             }
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
             }
+        });
+
+
+    }
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // There may be multiple widgets active, so update all of them
-            final int N = appWidgetIds.length;
+        final int N = appWidgetIds.length;
 
-            // Perform this loop procedure for each App Widget that belongs to this provider
-            for (int i=0; i<N; i++) {
-                int appWidgetId = appWidgetIds[i];
+        // Perform this loop procedure for each App Widget that belongs to this provider
+        for (int i=0; i<N; i++) {
+            int appWidgetId = appWidgetIds[i];
+            time();
 
-                sendSms();
 
-                // Create an Intent to launch ExampleActivity
-                Intent intent = new Intent(context, HomeScreenProfile.class);
-                PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+            // Create an Intent to launch ExampleActivity
+            Intent intent = new Intent(context, HomeScreenProfile.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
-                // Get the layout for the App Widget and attach an on-click listener
-                //  to the button
+            // Get the layout for the App Widget and attach an on-click listener
+            //  to the button
 
-                RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
-                views.setOnClickPendingIntent(R.id.header_cover_image, pendingIntent);
-                views.getClass();
-                // Tell the AppWidgetManager to perform an update on the current app widget
-                appWidgetManager.updateAppWidget(appWidgetId, views);
-            }
+            RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
+            views.setOnClickPendingIntent(R.id.header_cover_image, pendingIntent);
+            views.getClass();
+
+
+            // Tell the AppWidgetManager to perform an update on the current app widget
+            appWidgetManager.updateAppWidget(appWidgetId, views);
+        }
 
         for (int i=0; i<N; i++) {
             int appWidgetId = appWidgetIds[i];
@@ -109,7 +116,16 @@ public class AlertWidget extends AppWidgetProvider {
         }
 
     }
+         public  void time(){
+            Timer timer = new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    sendSms();
+                }
+            }, 1*1500);
 
+            }
 
 
     public void  sendSms(){
@@ -117,7 +133,7 @@ public class AlertWidget extends AppWidgetProvider {
         FirebaseUser users = FirebaseAuth.getInstance().getCurrentUser();
         String uid = users.getUid();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
+        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child(uid);
 
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -126,16 +142,23 @@ public class AlertWidget extends AppWidgetProvider {
                 String person1Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberOne").getValue().toString();
                 String person2Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberTwo").getValue().toString();
                 String person3Cont = dataSnapshot.child("emergencyContacts").child("emergencyContactNumberThree").getValue().toString();
+                //getting longitude and latitude
+                Double longitude = Double.valueOf((Double)dataSnapshot.child("location").child("longitude").getValue());
+               Double latitude = Double.valueOf((Double)dataSnapshot.child("location").child("latitude").getValue());
+
+                Object x = dataSnapshot.child("location").child("longitude").getValue();
+                Object y = dataSnapshot.child("location").child("latitude").getValue();
+
 
                 SmsManager manager = SmsManager.getDefault();
-                String locationUri= String.format("Hey am in danger. My Current Location: \nhttps://www.google.com/maps/@%f,%f,11z\n",42.585444,13.007813);
-
-
+                String locationUri= String.format("Hey am in danger. My Current Location: \nhttps://www.google.com/maps/@%f,%f,11z\n",latitude,longitude);
                 String[] phoneNums = {person1Cont,person2Cont,person3Cont};
 
                 for (String num : phoneNums) {
                     manager.sendTextMessage(num,null,locationUri,null,null);
                 }
+
+                saveAlert(y, x, locationUri);
 
             }
             @Override
@@ -144,8 +167,17 @@ public class AlertWidget extends AppWidgetProvider {
             }
         });
 
+    }
 
+    public void saveAlert(Object lat, Object lng, String msg){
 
+        FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
+        String uid=users.getUid();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("alerts").child(uid);
+        reference.child("latitude").setValue(lat);
+        reference.child("longitude").setValue(lng);
+        reference.child("message").setValue(msg);
     }
 
     @Override
@@ -170,4 +202,3 @@ public class AlertWidget extends AppWidgetProvider {
 
 
 }
-

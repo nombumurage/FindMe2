@@ -21,6 +21,10 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class LocationFragment extends Fragment implements OnMapReadyCallback{
@@ -28,7 +32,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
     double lon = 0;
     public MapView mMapView;
     public Context context;
-    public FloatingActionButton mFab;
+    DatabaseReference reference;
 
     public LocationFragment() {
         // Required empty public constructor
@@ -66,6 +70,8 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
         mMapView.onCreate(savedInstanceState);
         mMapView.getMapAsync(this);
 
+        saveToFirebase();
+
 //        mFab = (FloatingActionButton) rootView.findViewById(R.id.fab);
 //        mFab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -76,16 +82,26 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
 //        });
 
         final String text = String.format("Latitude %.6f, Longitude %.6f",
-                lat, lon);
-        Log.d(">>>>>>>>>>>>>>>>", text);
+                lat,
+                lon);
+        Log.d("location", text);
 
         return rootView;
+    }
+
+    public void saveToFirebase() {
+        FirebaseUser users= FirebaseAuth.getInstance().getCurrentUser();
+        String uid=users.getUid();
+        reference= FirebaseDatabase.getInstance().getReference("user").child(uid);
+
+        LatLng latLng = new LatLng(lat,lon);
+        reference.child("location").setValue(latLng);
+
     }
 
     @Override
     public void onMapReady(GoogleMap map) {
         LatLng latLng = new LatLng(lat,lon);
-
 
         if (map != null) {
             MapStyleOptions style = MapStyleOptions.loadRawResourceStyle(getActivity(), R.raw.style);
@@ -146,4 +162,3 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback{
 
 
 }
-
