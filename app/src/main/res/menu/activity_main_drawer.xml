@@ -4,28 +4,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
         <item
             android:id="@+id/nav_medDetails"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="User Details" />
         <item
             android:id="@+id/nav_contacts"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:icon="@drawable/ic_contact_phone_black_24dp"
+            android:title="Emergency Contacts" />
         <item
             android:id="@+id/nav_insurance"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:icon="@drawable/ic_content_paste_black_24dp"
+            android:title="Insurance" />
         <item
             android:id="@+id/nav_userProfile"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Insurances"/>
+            android:title="User Profile"/>
         <item
             android:id="@+id/nav_location"
-            android:icon="@drawable/ic_menu_share"
-            android:title="Share" />
+            android:icon="@drawable/ic_person_pin_circle_black_24dp"
+            android:title="Location" />
+
     </group>
 
     <item android:title="Communicate">
@@ -40,7 +41,7 @@
                 android:title="Send" />
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
                 android:title="Logout" />
         </menu>
     </item>

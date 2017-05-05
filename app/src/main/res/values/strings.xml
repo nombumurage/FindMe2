@@ -46,5 +46,7 @@
         <item>O-</item>
         <item>Unknown</item>
     </string-array>
+    <string name="title_activity_get_started">Get Started</string>
+    <string name="title_dashboard">Dashboard</string>
 
 </resources>
