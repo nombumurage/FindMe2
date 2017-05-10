@@ -79,7 +79,7 @@ public class AlertWidget extends AppWidgetProvider {
         // Perform this loop procedure for each App Widget that belongs to this provider
         for (int i=0; i<N; i++) {
             int appWidgetId = appWidgetIds[i];
-            time();
+
 
 
             // Create an Intent to launch ExampleActivity
@@ -92,6 +92,7 @@ public class AlertWidget extends AppWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.alert_widget);
             views.setOnClickPendingIntent(R.id.header_cover_image, pendingIntent);
             views.getClass();
+            time();
 
 
             // Tell the AppWidgetManager to perform an update on the current app widget
